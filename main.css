@@ -104,9 +104,9 @@ body {
   .form label{
     font-size: 18px;
     font-weight: 600;
-    padding-top: 15px;
+    margin-bottom: 15px;
   }
-  .form input .form select{
+  .form input, .form select{
     font-size: 18px;
     color: #213053;
     height: 60px;
@@ -114,10 +114,10 @@ body {
     border-radius: 15px;
     border: none;
   }
-  .form__submit.{
+  .form__submit{
     font-size:18px;
     font-weight: 600;
-    padding-botton: 40px;
+    margin-top: 40px;
   }
   select {
     appearance: none;
@@ -151,9 +151,10 @@ padding-right: 80px;
 h3{
   font-size: 16px; 
   opacity: 0.7;
-  padding-botton: 30px;
+  margin-bottom: 30px;
 }
 .footer__links{
+  display: flex;
   flex-direction: column;
-  padding-botton: 15px;
+  margin-bottom: 15px;
 }
