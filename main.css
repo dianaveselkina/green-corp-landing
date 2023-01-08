@@ -93,8 +93,8 @@ body {
   }
   .form p {
     font-size: 18px;
-    opacity: 0.65;  
-  }
+    opacity: 0.65; 
+      }
   .form__group {
     display: flex;
   flex-direction: column;
@@ -173,6 +173,100 @@ h3{
 .about__sun-image {
   animation: rotation 10s linear infinite;
   position: absolute;
+}
+.card{
+  display: grid;
+  grid-template-columns: auto auto auto; 
+  grid-gap: 0 50px; 
+}
+.cards{
+  padding: 35px 40px 25px 40px; 
+  border: 1px solid; 
+  border-color: #D9E4E6;
+  border-radius:5px;
+}
+.cards p{
+  opacity: 0.8;
+  font-size: 16px;
+  line-height: 22px;
+}
+.card__logo{
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  width: 100px;
+    height: 100px;
+    background-color:#eaeff9;
+    border-radius: 50%;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+.fa-solar-panel {
+  color: #ffb406;
+  }
+.fa-chart-line{
+  color: #22a030;
+  }
+    .features__border{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #E6EAF4;
+      }
+  .features__feedback{
+    display: flex;
+        justify-content: center;
+  }
+  .features__feedback-left{
+    margin-right: 10px;
+  }
+  .features__feedback-left h2{
+    font-size: 48px;
+  }
+  .features__feedback-left p{
+    font-size: 18px;
+    opacity: 0.7;
+    line-height: 26px; 
+  }
+  .features__feedback-right{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+    .features__box{
+    padding: 35px 40px 25px 40px; 
+    border-radius: 25px;
+    color: white;
+  }
+  .stars{
+    color: #ff7039;
+  }
+.features{
+    background-color: white;
+  padding: 115px 60px;
+}
+.features__savings-box{
+  background-color: #dc5e26;
+  box-shadow:  0px 6px 0px rgb(221 95 38 / 20%);
+}
+.features__rate-box{
+  background-color:#1D263A;
+  box-shadow:  0px 6px 0px rgb(29 38 58 / 20%);
+}
+.promo {
+  display: flex;
+}
+
+.promo__image {
+  background-image: url(img/promo.jpg);
+  width: 50%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+.promo__right{
+  background-color:#dd5f26;
+  padding: 160px 160px 60px 60px; 
 }
 @media (max-width: 1024px) {
   .about {
