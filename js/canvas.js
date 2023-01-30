@@ -1,5 +1,5 @@
 const COLORS = ["212,253,252", "67,160,158", "99,168,242", "28,88,152"];
-const BUBBLE_DENSITY = 100;
+const BUBBLE_DENSITY = 95;
 
 function generateDecimalBetween(left, right) {
    return (Math.random() * (left - right) + right).toFixed(2);
@@ -22,11 +22,11 @@ class Bubble {
   init() {
     this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
     this.alpha = generateDecimalBetween(5, 10) / 10;
-    this.size = generateDecimalBetween(2, 5);
+    this.size = generateDecimalBetween(1, 5);
     this.translateX = generateDecimalBetween(0, this.canvasWidth);
     this.translateY = generateDecimalBetween(0, this.canvasHeight);
-    this.velocity = generateDecimalBetween(10, 60);
-    this.movementX = generateDecimalBetween(-2, 2) / this.velocity;
+    this.velocity = generateDecimalBetween(15, 60);
+    this.movementX = generateDecimalBetween(-4, 4) / this.velocity;
     this.movementY = generateDecimalBetween(-1, -20) / this.velocity;
 }
 move() {
@@ -73,6 +73,24 @@ class CanvasBackground {
           this.ctx.arc(75, 60, 5, 0, Math.PI);
           this.ctx.fillStyle = "rgba(" + bubble.color + "," + bubble.alpha + ")";
           this.ctx.fill();
+          this.ctx.beginPath();
+          this.ctx.strokeStyle='grey';
+          this.ctx.moveTo(100,74);
+          this.ctx.lineTo(128,74);
+          this.ctx.stroke();
+          this.ctx.beginPath();
+          this.ctx.moveTo(114,60);
+          this.ctx.lineTo(114,88);
+          this.ctx.stroke();
+          this.ctx.beginPath();
+          this.ctx.moveTo(107,67);
+          this.ctx.lineTo(121,81);
+          this.ctx.stroke();
+          this.ctx.beginPath();
+          this.ctx.moveTo(107,81);
+          this.ctx.lineTo(121,67);
+          this.ctx.stroke();
+
           this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
       });
 
